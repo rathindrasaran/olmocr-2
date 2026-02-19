@@ -13,4 +13,6 @@ RUN pip install -r requirements.txt
 
 COPY handler.py /
 
+ENTRYPOINT []
+
 CMD [ "python", "-u", "handler.py" ]
