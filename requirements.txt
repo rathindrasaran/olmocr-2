@@ -1,6 +1,1 @@
 runpod
-base64
-io
-PIL
-vllm
-olmocr
