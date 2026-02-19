@@ -7,12 +7,12 @@ ENV HF_HUB_OFFLINE="1"
 
 COPY requirements.txt /requirements.txt
 
-RUN apt-get update
-RUN apt-get install -y python3 python3-pip python-is-python3
+# We rely on the base image's Python environment and only install your extra RunPod requirements
 RUN pip install -r requirements.txt
 
 COPY handler.py /
 
+# FIX: Clear any inherited entrypoint from the base image
 ENTRYPOINT []
 
 CMD [ "python", "-u", "handler.py" ]
