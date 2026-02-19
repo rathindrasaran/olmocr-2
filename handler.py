@@ -11,7 +11,7 @@ MODEL_NAME = "allenai/olmOCR-2-7B-1025-FP8"
 # Model Initialization using the correct fp8 quantization
 llm = LLM(
     model=MODEL_NAME, 
-    quantization="fp8", 
+    #quantization="fp8", 
     max_model_len=4096, 
     gpu_memory_utilization=0.85,
     trust_remote_code=True
