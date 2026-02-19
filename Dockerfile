@@ -8,7 +8,7 @@ ENV HF_HUB_OFFLINE="1"
 COPY requirements.txt /requirements.txt
 
 RUN apt-get update
-RUN pt-get install -y python3 python3-pip python-is-python3
+RUN apt-get install -y python3 python3-pip python-is-python3
 RUN pip install -r requirements.txt
 
 COPY handler.py /
